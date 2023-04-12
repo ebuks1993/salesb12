@@ -1,6 +1,22 @@
 from django.contrib import admin
-from .models import Semibase ,Ledgerbase,Product,Budget,month,year,Collection,PrevCollection,Period,current,Previous
+from .models import Semibase ,Ledgerbase,Product,Budget,month,year,Collection,PrevCollection,Period,current,Previous,User
 from import_export.admin import ImportExportModelAdmin
+from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
+
+
+@admin.register(User)
+class Useradmin(BaseUserAdmin):
+    # list_display = ['id','username','first_name','last_name']
+    add_fieldsets = (
+        (
+            None,
+            {
+                "classes": ("wide",),
+                "fields": ("username","email","password1", "password2","first_name")
+            },
+        ),
+    )
+
 
 # Register your models here.
 class salesAdmin(ImportExportModelAdmin,admin.ModelAdmin):
