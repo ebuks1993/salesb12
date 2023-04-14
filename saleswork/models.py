@@ -12,6 +12,10 @@ class Semibase (models.Model):
         ('Trade','Trade'),
         ('Marketing','Marketing')
         )
+    cond1=(
+        ('Active','Active'),
+        ('Inactive','Inactive')
+        )
 
     NSM = models.CharField( max_length=550)
     RSM = models.CharField( max_length=550)
@@ -24,6 +28,7 @@ class Semibase (models.Model):
     # CODE = models.CharField(max_length=450)
     STATUS = models.CharField( max_length=550)
     SEGMENT= models.CharField( max_length=150, choices=status1 ,default='Marketing')
+    condition= models.CharField( max_length=150, choices=cond1 ,default='Active')
 
     def __str__(self):
         return self.GROUP
@@ -41,6 +46,7 @@ class Ledgerbase(models.Model):
 class Product(models.Model):
     Name = models.CharField(max_length=1500)
     Price = models.IntegerField()
+    ctnqty = models.IntegerField(default=0)
 
     def __str__(self):
         return self.Name
