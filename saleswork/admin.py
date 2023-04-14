@@ -20,7 +20,7 @@ class Useradmin(BaseUserAdmin):
 
 # Register your models here.
 class salesAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display=['id','NSM','RSM','ASM','REP','REGION','TEAM','GROUP','STATUS','CHANNEL','SEGMENT']
+    list_display=['id','NSM','RSM','ASM','REP','REGION','TEAM','GROUP','STATUS','CHANNEL','SEGMENT','condition']
     search_fields=['GROUP__icontains']
     ...
 
@@ -37,7 +37,7 @@ admin.site.register(Ledgerbase,salesAdmin)
 
 
 class salesAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display=['id','Name','Price']
+    list_display=['id','Name','Price','ctnqty']
     search_fields=['Name__icontains']
     ...
 
