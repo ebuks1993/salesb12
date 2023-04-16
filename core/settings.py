@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-uw-kssa=(7w476xx(_cw99o*jd*843q%+5k$sto9%-7v304u=$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['*','dasheagle-production.up.railway.app']
 
 AUTH_USER_MODEL ='saleswork.User'  
 
