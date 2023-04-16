@@ -32,7 +32,7 @@ class SemiViewset(ModelViewSet):
     queryset=Semibase.objects.prefetch_related('ledgerbase_set').all()
     serializer_class=SemiSerializer
     filter_backends=[DjangoFilterBackend]
-    filterset_fields=['REGION','CHANNEL','TEAM','ASM','REP','SEGMENT']
+    filterset_fields=['REGION','CHANNEL','TEAM','ASM','REP','SEGMENT','condition']
 
 class ProductViewset(ModelViewSet):
     queryset=Product.objects.all()
