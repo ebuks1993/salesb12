@@ -58,7 +58,8 @@ class Budget (models.Model):
     semi = models.ForeignKey(Semibase, on_delete=models.CASCADE)
     Product = models.CharField( max_length=500)
     # value = models.IntegerField()
-    value = models.DecimalField(max_digits=10 ,decimal_places=3,null=True)
+    # value = models.DecimalField(max_digits=10 ,decimal_places=3,null=True)
+    value=models.FloatField(null=True,default=0)
    
 class current (models.Model):
     pro = models.ForeignKey(Product, on_delete=models.DO_NOTHING)
@@ -69,9 +70,10 @@ class current (models.Model):
     product = models.CharField( max_length=1500)
     customers = models.CharField( max_length=500)
     month = models.IntegerField()
-    ctns = models.IntegerField()
-    # fyear = models.IntegerField()
-    fyear = models.DecimalField(max_digits=10 ,decimal_places=3,null=True)
+    ctns=models.FloatField(null=True,default=0)
+    # ctns = models.IntegerField()
+    fyear = models.IntegerField(null=True)
+    # fyear = models.DecimalField(max_digits=10 ,decimal_places=3,null=True)
 
     # class Meta:
     #     unique_together=['pro','cust','fyear','TEAM','product','customers','month','ctns']
