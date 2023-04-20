@@ -50,7 +50,7 @@ class ProductSerializer(serializers.ModelSerializer):
     # fud=serializers.SerializerMethodField(method_name='revenue')
     class Meta:
         model=Product
-        fields=['id','Name','Price']
+        fields=['id','Name','Price','ctnqty']
     
     # def prodbudget (self ,prod:Product):
     #     bad=0
