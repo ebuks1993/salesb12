@@ -41,7 +41,7 @@ class SemiSerializer(serializers.ModelSerializer):
    
     class Meta:
         model=Semibase
-        fields=['id','NSM','RSM','ASM','REP','REGION','CHANNEL','GROUP','TEAM','STATUS',]
+        fields=['id','NSM','RSM','ASM','REP','REGION','CHANNEL','GROUP','TEAM','STATUS','condition']
 
 
 
