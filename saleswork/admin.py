@@ -20,7 +20,7 @@ class Useradmin(BaseUserAdmin):
 
 # Register your models here.
 class salesAdmin(ImportExportModelAdmin,admin.ModelAdmin):
-    list_display=['id','NSM','RSM','ASM','REP','REGION','TEAM','GROUP','STATUS','CHANNEL','SEGMENT','condition']
+    list_display=['id','NSM','RSM','ASM','REP','REGION','TEAM','GROUP','STATUS','CHANNEL','SEGMENT','condition',"Target"]
     search_fields=['GROUP__icontains']
     ...
 
