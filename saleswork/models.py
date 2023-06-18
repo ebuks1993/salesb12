@@ -29,6 +29,7 @@ class Semibase (models.Model):
     STATUS = models.CharField( max_length=550)
     SEGMENT= models.CharField( max_length=150, choices=status1 ,default='Marketing')
     condition= models.CharField( max_length=150, choices=cond1 ,default='Active')
+    Target = models.IntegerField(default=0)
 
     def __str__(self):
         return self.GROUP
