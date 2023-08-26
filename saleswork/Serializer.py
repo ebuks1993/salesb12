@@ -5,13 +5,20 @@ from django.db.models.aggregates import Count,Sum,Min,Max,Avg
 
 class LedgerSerializer(serializers.ModelSerializer):
     reg=serializers.SerializerMethodField(method_name='region')
+    chan=serializers.SerializerMethodField(method_name='channel')
+    AreaMgr=serializers.SerializerMethodField(method_name='asm')
     class Meta:
         model=Ledgerbase
-        fields=['id','semi','TEAM','STATUS','GROUP','LEDGER','reg']
+        fields=['id','semi','TEAM','STATUS','GROUP','LEDGER','reg','chan','AreaMgr']
 
 
     def region(self , leg:Ledgerbase):
         return leg.semi.REGION
+    def channel(self , leg:Ledgerbase):
+        return leg.semi.CHANNEL
+    def asm(self , leg:Ledgerbase):
+        return leg.semi.ASM
+    
 
 class CurrentSerializer(serializers.ModelSerializer):
     semi=serializers.SerializerMethodField(method_name='sem')
