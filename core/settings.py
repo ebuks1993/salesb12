@@ -111,9 +111,9 @@ else:
         'ENGINE': 'django.db.backends.postgresql',
         'NAME':'railway',
         'USER':'postgres',
-        'PASSWORD': '0FnoJH4ngqX2vNcAbHbE',
-        'HOST':'containers-us-west-15.railway.app',
-        'PORT':'7639'
+        'PASSWORD': 'EeB6aABcC44FEc5EEaFfccA6G3b3FDFB',
+        'HOST':'roundhouse.proxy.rlwy.net',
+        'PORT':'25575'
     }
 }
 
